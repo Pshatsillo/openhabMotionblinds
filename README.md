@@ -1,94 +1,36 @@
 # Motionblinds Binding
 
-_Give some details about what this binding is meant for - a protocol, system, specific device._
+Binding allows you to control wifi-connected curtain motor, that use 
+wifi bridge or direct connect to wifi.
 
-_If possible, provide some resources like pictures (only PNG is supported currently), a video, etc. to give an impression of what can be done with this binding._
-_You can place such resources into a `doc` folder next to this README.md._
+Apps, supported by binding:
 
-_Put each sentence in a separate line to improve readability of diffs._
+- Motionblinds app
+- Brel Home app 
+- Bloc Blinds app 
+- 3 Day Blinds app
+- Connector app
 
-## Supported Things
 
-_Please describe the different supported things / devices including their ThingTypeUID within this section._
-_Which different types are supported, which models were tested etc.?_
-_Note that it is planned to generate some part of this based on the XML files within ```src/main/resources/OH-INF/thing``` of your binding._
+## Setup
 
-- `bridge`: Short description of the Bridge, if any
-- `sample`: Short description of the Thing with the ThingTypeUID `sample`
+1. You need to get API Key
 
-## Discovery
+**Motionblinds app**
 
-_Describe the available auto-discovery features here._
-_Mention for what it works and what needs to be kept in mind when using it._
+The Motionblinds API uses a 16 character key that can be retrieved from the official “Motionblinds” app for IOS or Android.
 
-## Binding Configuration
+Open the app, click the 3 dots in the top right corner, go to “settings”, go to “Motion APP About”, Please quickly tap this “Motion APP About” page 5 times, a popup will appear that gives you the key.
 
-_If your binding requires or supports general configuration settings, please create a folder ```cfg``` and place the configuration file ```<bindingId>.cfg``` inside it._
-_In this section, you should link to this file and provide some information about the options._
-_The file could e.g. look like:_
+**Brel Home app**
 
-```
-# Configuration for the Motionblinds Binding
-#
-# Default secret key for the pairing of the Motionblinds Thing.
-# It has to be between 10-40 (alphanumeric) characters.
-# This may be changed by the user for security reasons.
-secret=openHABSecret
-```
+In the Brel Home app on iOS go to the me page (home screen 4th tab), on the bottom of this page multi-tap on the “version x.x.x(xxxx)” gray info and a pop-up with the key will be shown. In the Brel Home app on Android go to the me page (home screen 4th tab), 
+tap 5 times on the right side of the photo place and a pop-up with the key will be shown.
 
-_Note that it is planned to generate some part of this based on the information that is available within ```src/main/resources/OH-INF/binding``` of your binding._
+**Connector app**
 
-_If your binding does not offer any generic configurations, you can remove this section completely._
+In the left sidebar of the app, open the Settings (gear button)
 
-## Thing Configuration
+Select the About page of the Connector app.
 
-_Describe what is needed to manually configure a thing, either through the UI or via a thing-file._
-_This should be mainly about its mandatory and optional configuration parameters._
-
-_Note that it is planned to generate some part of this based on the XML files within ```src/main/resources/OH-INF/thing``` of your binding._
-
-### `sample` Thing Configuration
-
-| Name            | Type    | Description                           | Default | Required | Advanced |
-|-----------------|---------|---------------------------------------|---------|----------|----------|
-| hostname        | text    | Hostname or IP address of the device  | N/A     | yes      | no       |
-| password        | text    | Password to access the device         | N/A     | yes      | no       |
-| refreshInterval | integer | Interval the device is polled in sec. | 600     | no       | yes      |
-
-## Channels
-
-_Here you should provide information about available channel types, what their meaning is and how they can be used._
-
-_Note that it is planned to generate some part of this based on the XML files within ```src/main/resources/OH-INF/thing``` of your binding._
-
-| Channel | Type   | Read/Write | Description                 |
-|---------|--------|------------|-----------------------------|
-| control | Switch | RW         | This is the control channel |
-
-## Full Example
-
-_Provide a full usage example based on textual configuration files._
-_*.things, *.items examples are mandatory as textual configuration is well used by many users._
-_*.sitemap examples are optional._
-
-### Thing Configuration
-
-```java
-Example thing configuration goes here.
-```
-### Item Configuration
-
-```java
-Example item configuration goes here.
-```
-
-### Sitemap Configuration
-
-```perl
-Optional Sitemap configuration goes here.
-Remove this section, if not needed.
-```
-
-## Any custom content here!
-
-_Feel free to add additional sections for whatever you think should also be mentioned about your binding!_
+Tap the screen 5 times while being on the About page

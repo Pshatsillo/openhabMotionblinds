@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2010-2025 Contributors to the openHAB project
+ * Copyright (c) 2010-2024 Contributors to the openHAB project
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information.
@@ -15,15 +15,12 @@ package org.openhab.binding.motionblinds.internal;
 import static org.openhab.binding.motionblinds.internal.MotionblindsBindingConstants.*;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
 import org.openhab.core.thing.ChannelUID;
 import org.openhab.core.thing.Thing;
 import org.openhab.core.thing.ThingStatus;
 import org.openhab.core.thing.binding.BaseThingHandler;
 import org.openhab.core.types.Command;
 import org.openhab.core.types.RefreshType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * The {@link MotionblindsHandler} is responsible for handling commands, which are
@@ -34,9 +31,9 @@ import org.slf4j.LoggerFactory;
 @NonNullByDefault
 public class MotionblindsHandler extends BaseThingHandler {
 
-    private final Logger logger = LoggerFactory.getLogger(MotionblindsHandler.class);
+    // private final Logger logger = LoggerFactory.getLogger(MotionblindsHandler.class);
 
-    private @Nullable MotionblindsConfiguration config;
+    // private @Nullable MotionblindsConfiguration config;
 
     public MotionblindsHandler(Thing thing) {
         super(thing);
@@ -60,7 +57,7 @@ public class MotionblindsHandler extends BaseThingHandler {
 
     @Override
     public void initialize() {
-        config = getConfigAs(MotionblindsConfiguration.class);
+        // config = getConfigAs(MotionblindsConfiguration.class);
 
         // TODO: Initialize the handler.
         // The framework requires you to return from this method quickly, i.e. any network access must be done in
